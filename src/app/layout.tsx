@@ -40,6 +40,9 @@ export const metadata: Metadata = {
       },
     ],
   },
+  verification: {
+    google: "google1b71ceb503610a91.html",
+  },
 };
 
 import { Toaster } from "sonner";
