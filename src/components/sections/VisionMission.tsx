@@ -35,7 +35,7 @@ export function VisionMission() {
           <div className="text-[#f59e0b] font-semibold tracking-[4px] uppercase text-sm glass-orange px-4 py-2 rounded-full inline-block mx-auto mb-4">
             Our Vision
           </div>
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold font-[var(--font-space-grotesk)] leading-tight">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold font-[var(--font-space-grotesk)] leading-tight break-words">
             To become the <span className="gradient-text glow-text-orange">#1</span> marketing partner for <span className="text-white">food brands.</span>
           </h2>
         </div>
@@ -48,7 +48,7 @@ export function VisionMission() {
           <div className="text-[#ff6b00] font-semibold tracking-[4px] uppercase text-sm glass-orange px-4 py-2 rounded-full inline-block mx-auto mb-4">
             Our Mission
           </div>
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold font-[var(--font-space-grotesk)] leading-tight text-[#94a3b8]">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold font-[var(--font-space-grotesk)] leading-tight text-[#94a3b8] break-words">
             Deliver measurable <span className="text-white">growth</span> through bold <span className="text-white">creative</span> and intelligent <span className="text-white">strategy.</span>
           </h2>
         </div>

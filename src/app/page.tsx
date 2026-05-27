@@ -16,6 +16,8 @@ import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
+  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
+  const [isHighlighted, setIsHighlighted] = useState(false);
 
   return (
     <>
@@ -29,8 +31,18 @@ export default function Home() {
           <VisionMission />
           <Strategy />
           <WhyChooseUs />
-          <Pricing />
-          <Contact />
+          <Pricing
+            onSelectPlan={(planName) => {
+              setSelectedPlan(planName);
+              setIsHighlighted(true);
+            }}
+          />
+          <Contact
+            selectedPlan={selectedPlan}
+            isHighlighted={isHighlighted}
+            onHighlightComplete={() => setIsHighlighted(false)}
+            onClearPlan={() => setSelectedPlan(null)}
+          />
         </main>
         <Footer />
       </SmoothScroll>

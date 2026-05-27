@@ -30,7 +30,7 @@ export function About() {
       <div className="absolute top-1/2 right-0 w-[800px] h-[800px] bg-[#ff6b00]/5 rounded-full blur-[150px] -translate-y-1/2" />
 
       <div className="relative z-10 max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-20 lg:gap-32 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-32 items-center">
           {/* Left: Text */}
           <motion.div
             ref={ref}
@@ -90,7 +90,7 @@ export function About() {
             <motion.div variants={itemVariants} className="mt-4">
               <button
                 onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-                className="flex sm:inline-flex items-center justify-center text-center gap-4 px-6 md:px-10 py-4 md:py-5 min-w-[220px] w-fit max-w-full bg-gradient-to-r from-[#ff6b00] to-[#f59e0b] text-white rounded-2xl font-bold text-base md:text-lg hover:opacity-90 hover:scale-105 transition-all duration-500 glow-orange whitespace-nowrap"
+                className="flex sm:inline-flex items-center justify-center text-center gap-4 px-6 md:px-10 py-4 md:py-5 min-w-[220px] w-full sm:w-fit max-w-full bg-gradient-to-r from-[#ff6b00] to-[#f59e0b] text-white rounded-2xl font-bold text-base md:text-lg hover:opacity-90 hover:scale-105 transition-all duration-500 glow-orange whitespace-nowrap"
               >
                 Work With Us
                 <svg width="20" height="20" viewBox="0 0 16 16" fill="none" className="shrink-0">

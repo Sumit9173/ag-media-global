@@ -114,7 +114,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2.9, duration: 0.9, ease: "easeOut" }}
-          className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] tracking-tight font-[var(--font-space-grotesk)] max-w-5xl"
+          className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] tracking-tight font-[var(--font-space-grotesk)] max-w-5xl break-words"
         >
           Brewing{" "}
           <span className="gradient-text glow-text-orange">Success</span>{" "}
@@ -143,7 +143,7 @@ export function Hero() {
           <button
             id="hero-explore-btn"
             onClick={() => scrollTo("strategy")}
-            className="group relative px-6 md:px-10 py-4 md:py-5 min-w-[180px] w-fit max-w-full text-sm md:text-base font-bold text-white bg-gradient-to-r from-[#ff6b00] to-[#f59e0b] rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(255,107,0,0.5)] flex items-center justify-center text-center gap-3 whitespace-nowrap"
+            className="group relative px-6 md:px-10 py-4 md:py-5 min-w-[180px] w-full sm:w-fit max-w-full text-sm md:text-base font-bold text-white bg-gradient-to-r from-[#ff6b00] to-[#f59e0b] rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(255,107,0,0.5)] flex items-center justify-center text-center gap-3 whitespace-nowrap"
           >
             <span className="relative z-10">Explore Services</span>
             <span className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
@@ -156,7 +156,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 3.5, duration: 0.7 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mt-12 w-full max-w-4xl"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mt-12 w-full max-w-4xl"
         >
           {stats.map((stat) => (
             <div

@@ -69,7 +69,7 @@ export function Navbar() {
           : "py-5 bg-transparent"
           }`}
       >
-        <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 md:px-12 flex items-center justify-between">
           {/* Logo */}
           <button
             onClick={() => scrollTo("#home")}

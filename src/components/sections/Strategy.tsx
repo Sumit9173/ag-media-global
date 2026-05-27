@@ -67,7 +67,7 @@ export function Strategy() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-4xl md:text-6xl font-bold font-[var(--font-space-grotesk)] leading-[1.1]"
+              className="text-4xl md:text-6xl font-bold font-[var(--font-space-grotesk)] leading-[1.1] break-words"
             >
               The Recipe For <br />
               <span className="gradient-text">Brand Dominance</span>
@@ -85,7 +85,7 @@ export function Strategy() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           {services.map((service, index) => (
             <motion.div
               key={service.id}

@@ -53,14 +53,14 @@ export function WhyChooseUs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-6xl font-bold font-[var(--font-space-grotesk)] leading-[1.1]"
+            className="text-4xl md:text-6xl font-bold font-[var(--font-space-grotesk)] leading-[1.1] break-words"
           >
             Not Just Another <br className="md:hidden" />
             <span className="gradient-text glow-gold">Agency</span>
           </motion.h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           {features.map((feature, idx) => (
             <motion.div
               key={feature.title}
