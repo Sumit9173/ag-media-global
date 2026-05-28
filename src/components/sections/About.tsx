@@ -135,7 +135,7 @@ export function About() {
                 >
                   {/* The actual image */}
                   <img
-                    src="/about-us.png"
+                    src="/about-us.jpeg"
                     alt="AG Media Premium Marketing Workspace"
                     className="w-full h-auto min-h-full object-cover object-center rounded-[2.5rem] shadow-[0_0_40px_rgba(255,107,0,0.3)] relative z-10"
                     style={{

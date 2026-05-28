@@ -11,9 +11,12 @@ const plans = [
     price: "₹11,999",
     desc: "Perfect for local cafes and single-location restaurants starting out.",
     features: [
-      "Social Media Management (2 platforms)",
-      "12 High-Quality Posts/month",
-      "Basic Community Management",
+      "8 Reels/Month",
+      "2 Shoot Visit Days",
+      "Professional Editing",               
+      "Captions & Hashtags",
+      "Content Planing",
+      "Posting Guidance",
       "Monthly Performance Report",
     ],
     highlight: false,
@@ -23,11 +26,14 @@ const plans = [
     price: "₹19,999",
     desc: "Ideal for growing food brands looking to scale their online presence.",
     features: [
-      "Social Media Management (3 platforms)",
-      "20 High-Quality Posts/month",
-      "Professional Food Photography (1 shoot)",
-      "Basic Meta Ads Management",
-      "Bi-weekly Strategy Calls",
+      "15 Reels/Month",
+      "4 Shoot Visit Days",
+      "Professional Editing",               
+      "Captions & Hashtags",
+      "Content Planning",
+      "Posting Guidance",
+      "Lead Form Integration",
+      "Monthly Performance Report",
     ],
     highlight: true,
   },
@@ -36,12 +42,17 @@ const plans = [
     price: "₹39,999",
     desc: "Full-stack marketing for established chains and FMCG brands.",
     features: [
-      "Omnichannel Management",
-      "Unlimited Content Creation",
-      "Advanced Paid Ads & Retargeting",
-      "Influencer Campaign Management",
-      "SEO & Content Marketing",
-      "Dedicated Account Manager",
+      "30 Reels/Month",
+      "8 Shoot Visit Days",
+      "Advanced Editing",
+      "Meta Ads Management",               
+      "Captions & Hashtags",
+      "Content Planing",
+      "Posting Guidance",
+      "Lead Form Integration",
+      "Full Business Website",
+      "24/7 Priority Support",
+      "Monthly Performance Report",
     ],
     highlight: false,
   },
@@ -94,11 +105,11 @@ export function Pricing({ onSelectPlan }: PricingProps) {
                 transition={{ delay: idx * 0.15 }}
                 onMouseEnter={() => setHoveredCard(idx)}
                 onMouseLeave={() => setHoveredCard(null)}
-                className={`relative flex flex-col glass rounded-[2.5rem] p-8 md:p-10 pb-12 md:pb-14 overflow-hidden transition-all duration-700 ${plan.highlight ? "border-[#ff6b00]/40 shadow-[0_0_60px_rgba(255,107,0,0.15)]" : "border-white/5"} ${isHovered ? "scale-[1.03] bg-[#111] border-[#ff6b00]/30 z-10" : "z-0"}`}
+                className={`relative flex flex-col glass rounded-[2.5rem] p-8 md:p-10 pb-12 md:pb-14 overflow-visible pt-8 transition-all duration-700 ${plan.highlight ? "border-[#ff6b00]/40 shadow-[0_0_60px_rgba(255,107,0,0.15)]" : "border-white/5"} ${isHovered ? "scale-[1.03] bg-[#111] border-[#ff6b00]/30 z-10" : "z-0"}`}
               >
                 {/* Popular Badge */}
                 {plan.highlight && (
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 px-6 py-2 bg-gradient-to-r from-[#ff6b00] to-[#f59e0b] text-white text-[10px] font-black uppercase tracking-[2px] rounded-full shadow-[0_0_30px_rgba(255,107,0,0.5)] z-20">
+                  <div className="absolute -top-0 left-1/2 -translate-x-1/2 px-6 py-2 bg-gradient-to-r from-[#ff6b00] to-[#f59e0b] text-white text-[10px] uppercase tracking-[5px] rounded-full shadow-[0_0_30px_rgba(255,107,0,0.5)] z-[999] whitespace-nowrap">
                     Most Popular
                   </div>
                 )}
@@ -128,7 +139,7 @@ export function Pricing({ onSelectPlan }: PricingProps) {
                       <li key={feature} className="flex items-start gap-4">
                         <div className={`w-6 h-6 shrink-0 rounded-full flex items-center justify-center mt-0.5 ${plan.highlight ? "bg-[#ff6b00]/20 text-[#ff6b00]" : "bg-white/5 text-[#94a3b8]"}`}>
                           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M5 13l4 4L19 7" />
                           </svg>
                         </div>
                         <span className="text-sm md:text-base text-[#cbd5e1] leading-tight">{feature}</span>
@@ -216,9 +227,11 @@ export function Pricing({ onSelectPlan }: PricingProps) {
               </div>
 
               {/* Subtext */}
-              <p className="text-[#94a3b8] text-sm md:text-base leading-relaxed mb-8 max-w-sm mx-auto">
+              <div className="mt-6 mb-6 px-6 py-6 rounded-xl">
+              <p className="text-[#94a3b8] text-base text-center">
                 Your request will be sent to the <span className="text-white font-semibold">AG Media</span> team and we will contact you shortly. Please fill the contact form to complete your request.
               </p>
+              </div>
 
               {/* Actions */}
               <div className="flex flex-col sm:flex-row gap-4">
@@ -230,6 +243,7 @@ export function Pricing({ onSelectPlan }: PricingProps) {
                   <X className="w-4 h-4" />
                   Cancel
                 </button>
+                
 
                 {/* Confirm Button */}
                 <button
