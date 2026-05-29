@@ -2,8 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { toast } from "sonner";
-import { Loader2, Sparkles, Check, X } from "lucide-react";
+import { Sparkles, Check, X } from "lucide-react";
 
 const plans = [
   {

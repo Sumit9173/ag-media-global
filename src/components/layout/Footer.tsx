@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 
 export function Footer() {
   const scrollToTop = () => {
@@ -17,7 +16,15 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-16">
           <div className="flex items-center gap-3">
             <div className="relative w-10 h-10 rounded-lg overflow-hidden transition-transform duration-300 hover:scale-110">
-              <img src="/ag-media_icon.jpeg" alt="AG Media Logo" className="w-full h-full object-cover" />
+              <img
+                src="/ag-media_icon.jpeg"
+                alt="AG Media - Creative Food & Beverage Marketing Agency Logo"
+                width={40}
+                height={40}
+                loading="lazy"
+                decoding="async"
+                className="w-full h-full object-cover"
+              />
             </div>
             <span className="text-white font-bold text-xl tracking-wide font-[var(--font-space-grotesk)]">
               AG <span className="gradient-text">MEDIA</span>

@@ -62,7 +62,7 @@ export function WhyChooseUs() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           {features.map((feature, idx) => (
-            <motion.div
+            <motion.article
               key={feature.title}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -89,7 +89,7 @@ export function WhyChooseUs() {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>

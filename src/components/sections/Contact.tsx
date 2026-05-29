@@ -1,9 +1,10 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { toast } from "sonner";
-import { Loader2, Check, Sparkles, X } from "lucide-react";
+import { Loader2, Check } from "lucide-react";
 
 interface ContactProps {
   selectedPlan?: string | null;

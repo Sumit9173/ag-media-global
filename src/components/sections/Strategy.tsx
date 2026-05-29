@@ -87,7 +87,7 @@ export function Strategy() {
         {/* Services Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           {services.map((service, index) => (
-            <motion.div
+            <motion.article
               key={service.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -118,15 +118,19 @@ export function Strategy() {
                 </div>
                 
                 <div className="pt-10 mt-auto border-t border-white/5 group-hover:border-[#ff6b00]/20 transition-colors flex justify-center pb-2">
-                  <button 
-                    onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+                  <a 
+                    href="#contact"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                    }}
                     className="text-[#ff6b00] text-base font-bold flex items-center justify-center text-center gap-3 group-hover:gap-5 transition-all duration-300 py-3 px-8 w-full sm:w-auto rounded-full hover:bg-[#ff6b00]/10 border border-transparent hover:border-[#ff6b00]/20"
                   >
                     Learn more <span className="text-2xl leading-none group-hover:translate-x-2 transition-transform">&rarr;</span>
-                  </button>
+                  </a>
                 </div>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>

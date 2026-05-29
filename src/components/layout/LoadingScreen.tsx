@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
@@ -47,7 +47,14 @@ export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
               className="flex items-center gap-3"
             >
               <div className="relative w-14 h-14 rounded-xl overflow-hidden shadow-[0_0_40px_rgba(255,107,0,0.5)]">
-                <img src="/ag-media_icon.jpeg" alt="AG Media Logo" className="w-full h-full object-cover" />
+                <img
+                  src="/ag-media_icon.jpeg"
+                  alt="AG Media - Creative Food & Beverage Marketing Agency Logo"
+                  width={56}
+                  height={56}
+                  decoding="async"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
                 <div className="text-3xl font-bold text-white font-[var(--font-space-grotesk)] tracking-wider">

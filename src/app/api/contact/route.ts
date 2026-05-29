@@ -247,10 +247,11 @@ Message: ${message}`,
     await transporter.sendMail(mailOptions);
 
     return NextResponse.json({ success: true });
-  } catch (error: any) {
-    console.error("Error in contact POST API Route:", error);
+  } catch (error) {
+    const err = error as Error;
+    console.error("Error in contact POST API Route:", err);
     return NextResponse.json(
-      { error: error.message || "An unexpected error occurred while sending the email." },
+      { error: err.message || "An unexpected error occurred while sending the email." },
       { status: 500 }
     );
   }

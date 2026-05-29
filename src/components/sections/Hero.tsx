@@ -140,14 +140,18 @@ export function Hero() {
           transition={{ delay: 3.3, duration: 0.6 }}
           className="flex flex-col sm:flex-row gap-5 items-center"
         >
-          <button
+          <a
             id="hero-explore-btn"
-            onClick={() => scrollTo("strategy")}
+            href="#strategy"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollTo("strategy");
+            }}
             className="group relative px-6 md:px-10 py-4 md:py-5 min-w-[180px] w-full sm:w-fit max-w-full text-sm md:text-base font-bold text-white bg-gradient-to-r from-[#ff6b00] to-[#f59e0b] rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(255,107,0,0.5)] flex items-center justify-center text-center gap-3 whitespace-nowrap"
           >
             <span className="relative z-10">Explore Services</span>
             <span className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-          </button>
+          </a>
           <WhatsAppButton variant="secondary" className="px-8 md:px-12 py-4 md:py-5 w-full sm:w-auto" />
         </motion.div>
 

@@ -77,9 +77,9 @@ export function About() {
                 >
                   <div className="text-3xl mt-1 group-hover:scale-125 transition-transform duration-500">{p.icon}</div>
                   <div>
-                    <div className="font-bold text-white text-lg mb-1 font-[var(--font-space-grotesk)] group-hover:text-[#ff6b00] transition-colors">
+                    <h3 className="font-bold text-white text-lg mb-1 font-[var(--font-space-grotesk)] group-hover:text-[#ff6b00] transition-colors">
                       {p.title}
-                    </div>
+                    </h3>
                     <div className="text-[#94a3b8] text-base leading-relaxed">{p.desc}</div>
                   </div>
                 </motion.div>
@@ -88,15 +88,19 @@ export function About() {
 
             {/* CTA */}
             <motion.div variants={itemVariants} className="mt-4">
-              <button
-                onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+              <a
+                href="#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                }}
                 className="flex sm:inline-flex items-center justify-center text-center gap-4 px-6 md:px-10 py-4 md:py-5 min-w-[220px] w-full sm:w-fit max-w-full bg-gradient-to-r from-[#ff6b00] to-[#f59e0b] text-white rounded-2xl font-bold text-base md:text-lg hover:opacity-90 hover:scale-105 transition-all duration-500 glow-orange whitespace-nowrap"
               >
                 Work With Us
                 <svg width="20" height="20" viewBox="0 0 16 16" fill="none" className="shrink-0">
                   <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-              </button>
+              </a>
             </motion.div>
           </motion.div>
 
@@ -136,7 +140,11 @@ export function About() {
                   {/* The actual image */}
                   <img
                     src="/about-us.jpeg"
-                    alt="AG Media Premium Marketing Workspace"
+                    alt="AG Media Premium Food and Beverage Marketing Agency Workspace and Brand Strategy Team"
+                    width={800}
+                    height={700}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-auto min-h-full object-cover object-center rounded-[2.5rem] shadow-[0_0_40px_rgba(255,107,0,0.3)] relative z-10"
                     style={{
                       display: "block",
