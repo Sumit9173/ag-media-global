@@ -126,8 +126,8 @@ export function Contact({
     }
   };
 
-  const inputStyles = "w-full bg-black/60 border border-white/10 rounded-2xl px-8 py-5 text-white placeholder-transparent focus:outline-none focus:border-[#ff6b00] focus:bg-[#ff6b00]/5 transition-all peer";
-  const labelStyles = "absolute left-8 -top-2.5 bg-[#050505] px-2 text-xs text-[#ff6b00] transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-[#94a3b8] peer-placeholder-shown:top-5 peer-placeholder-shown:bg-transparent peer-focus:-top-2.5 peer-focus:text-xs peer-focus:text-[#ff6b00] peer-focus:bg-[#050505]";
+  const inputStyles = "w-full bg-black/60 border border-white/10 rounded-2xl px-8 py-5 text-white placeholder-transparent focus:outline-none focus:border-[#ff6b00] focus:bg-[#ff6b00]/5 transition-all peer overflow-visible";
+  const labelStyles = "text-xs md:text-sm font-bold text-white/60 uppercase tracking-widest transition-colors duration-300 peer-focus:text-[#ff6b00] pointer-events-none";
 
   return (
     <section id="contact" className="relative section-padding overflow-hidden">
@@ -247,30 +247,33 @@ export function Contact({
             )}
 
             <form className="flex flex-col gap-8 relative z-10" onSubmit={handleSubmit}>
+              {/* Dedicated top section spacing to move input grid downward and ensure labels never touch/cross the card border */}
+              <div className="pt-4 md:pt-6" />
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="relative">
-                  <input type="text" id="name" value={formData.name} onChange={handleChange} placeholder="Name" required className={inputStyles} disabled={isSubmitting} />
+                <div className="flex flex-col-reverse gap-2 relative">
+                  <input type="text" id="name" value={formData.name} onChange={handleChange} placeholder=" " required className={inputStyles} disabled={isSubmitting} />
                   <label htmlFor="name" className={labelStyles}>Your Name</label>
                 </div>
-                <div className="relative">
-                  <input type="text" id="brand" value={formData.brand} onChange={handleChange} placeholder="Brand" required className={inputStyles} disabled={isSubmitting} />
+                <div className="flex flex-col-reverse gap-2 relative">
+                  <input type="text" id="brand" value={formData.brand} onChange={handleChange} placeholder=" " required className={inputStyles} disabled={isSubmitting} />
                   <label htmlFor="brand" className={labelStyles}>Brand Name</label>
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="relative">
-                  <input type="email" id="email" value={formData.email} onChange={handleChange} placeholder="Email" required className={inputStyles} disabled={isSubmitting} />
+                <div className="flex flex-col-reverse gap-2 relative">
+                  <input type="email" id="email" value={formData.email} onChange={handleChange} placeholder=" " required className={inputStyles} disabled={isSubmitting} />
                   <label htmlFor="email" className={labelStyles}>Email Address</label>
                 </div>
-                <div className="relative">
-                  <input type="tel" id="phone" value={formData.phone} onChange={handleChange} placeholder="Phone" required className={inputStyles} disabled={isSubmitting} />
+                <div className="flex flex-col-reverse gap-2 relative">
+                  <input type="tel" id="phone" value={formData.phone} onChange={handleChange} placeholder=" " required className={inputStyles} disabled={isSubmitting} />
                   <label htmlFor="phone" className={labelStyles}>Phone Number</label>
                 </div>
               </div>
 
-              <div className="relative">
-                <textarea id="message" value={formData.message} onChange={handleChange} rows={5} placeholder="Message" required className={`${inputStyles} resize-none`} disabled={isSubmitting} />
+              <div className="flex flex-col-reverse gap-2 relative w-full">
+                <textarea id="message" value={formData.message} onChange={handleChange} rows={5} placeholder=" " required className={`${inputStyles} resize-none w-full`} disabled={isSubmitting} />
                 <label htmlFor="message" className={labelStyles}>Tell us about your goals</label>
               </div>
 

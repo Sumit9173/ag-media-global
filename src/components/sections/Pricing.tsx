@@ -105,11 +105,11 @@ export function Pricing({ onSelectPlan }: PricingProps) {
                 transition={{ delay: idx * 0.15 }}
                 onMouseEnter={() => setHoveredCard(idx)}
                 onMouseLeave={() => setHoveredCard(null)}
-                className={`relative flex flex-col glass rounded-[2.5rem] p-8 md:p-10 pb-12 md:pb-14 overflow-visible pt-8 transition-all duration-700 ${plan.highlight ? "border-[#ff6b00]/40 shadow-[0_0_60px_rgba(255,107,0,0.15)]" : "border-white/5"} ${isHovered ? "scale-[1.03] bg-[#111] border-[#ff6b00]/30 z-10" : "z-0"}`}
+                className={`relative flex flex-col glass rounded-[2.5rem] p-8 md:p-10 pb-12 md:pb-14 overflow-visible pt-20 transition-all duration-700 ${plan.highlight ? "border-[#ff6b00]/40 shadow-[0_0_60px_rgba(255,107,0,0.15)]" : "border-white/5"} ${isHovered ? "scale-[1.03] bg-[#111] border-[#ff6b00]/30 z-10" : "z-0"}`}
               >
                 {/* Popular Badge */}
                 {plan.highlight && (
-                  <div className="absolute -top-0 left-1/2 -translate-x-1/2 px-6 py-2 bg-gradient-to-r from-[#ff6b00] to-[#f59e0b] text-white text-[10px] uppercase tracking-[5px] rounded-full shadow-[0_0_30px_rgba(255,107,0,0.5)] z-[999] whitespace-nowrap">
+                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 px-6 py-2 bg-gradient-to-r from-[#ff6b00] to-[#f59e0b] text-white text-[10px] uppercase tracking-[5px] rounded-full shadow-[0_0_30px_rgba(255,107,0,0.5)] z-[999] whitespace-nowrap">
                     Most Popular
                   </div>
                 )}
