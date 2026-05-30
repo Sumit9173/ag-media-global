@@ -1,4 +1,7 @@
+
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import type { Metadata } from "next";
+
 import { Space_Grotesk, Inter } from "next/font/google";
 import "./globals.css";
 
@@ -224,10 +227,8 @@ export default function RootLayout({
       style={{ background: "#050505" }}
     >
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <GoogleAnalytics />
+        
       </head>
       <body className="bg-background text-white antialiased overflow-x-hidden">
         {children}
